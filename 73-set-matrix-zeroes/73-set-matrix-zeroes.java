@@ -1,29 +1,32 @@
 class Solution {
     public void setZeroes(int[][] matrix) {
-        int m = matrix.length;
-        int n = matrix[0].length;
-        boolean[] row = new boolean[m];
-        boolean[] col = new boolean[n];
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (matrix[i][j] == 0) {
-                    row[i] = true;
-                    col[j] = true;
+        HashSet<Integer> row = new HashSet<>();
+        HashSet<Integer> col = new HashSet<>();
+        for(int i=0; i<matrix[0].length; i++){
+            for(int j=0; j<matrix.length; j++){
+                if(matrix[j][i] == 0) {
+                    col.add(i);
+                    break;
                 }
             }
         }
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (row[i] || col[j]) {
-                    matrix[i][j] = 0;
+        for(int i=0; i<matrix.length; i++){
+            for(int j=0; j<matrix[0].length; j++){
+                if(matrix[i][j] == 0) {
+                    row.add(i);
+                    break;
                 }
             }
         }
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                System.out.print(matrix[i][j] + " ");
+        for (int ele : row) {
+            for(int j=0; j<matrix[0].length; j++){
+                matrix[ele][j] = 0;
             }
-            System.out.println();
+        }
+        for (int ele : col) {
+            for(int j=0; j<matrix.length; j++){
+                matrix[j][ele] = 0;
+            }
         }
     }
 }
