@@ -11,13 +11,9 @@ class Solution {
             }
         }
         int result=0;
-        //int j=0;
-        //ArrayList<Integer> list=new ArrayList<Integer>();
         for(int i=0;i<length;i++){
             if(map.get(nums[i])==1){
                 result=nums[i];
-                //result[j]=nums[i];
-                  //  j++;
             }
         }
         return result;   
