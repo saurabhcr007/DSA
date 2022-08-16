@@ -10,14 +10,10 @@ class Solution {
                 map.put(nums[i],1);
             }
         }
-        //int[] result=new int[2];
-        //int j=0;
         ArrayList<Integer> list=new ArrayList<Integer>();
         for(int i=0;i<length;i++){
             if(map.get(nums[i])==1){
                 list.add(nums[i]);
-                //result[j]=nums[i];
-                  //  j++;
             }
         }
         return list.stream().mapToInt(Integer::intValue).toArray();
