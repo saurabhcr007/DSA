@@ -1,4 +1,7 @@
-class Solution {
+   
+//NORMAL SOLUTION
+
+// class Solution {
 //     public int coinChange(int[] coins, int amount) {
 //         int len=coins.length;
 //         Arrays.sort(coins);
@@ -25,7 +28,6 @@ class Solution {
 //                 i--;
 //                 count--;
 //             }
-            
 //             if(sum==amount){
 //                 break;
 //             }
@@ -35,6 +37,11 @@ class Solution {
 //         }
 //         return count;
 //     }
+// }
+
+    //OPTIMAL SOLUTION
+
+class Solution {
     public int coinChange(int[] coins, int amount) {
     int[] dp = new int[amount + 1];
     for (int i=1; i < dp.length; i++) {
