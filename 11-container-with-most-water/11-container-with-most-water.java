@@ -1,8 +1,7 @@
 class Solution {
-    //int max=0,area=0;
     public int maxArea(int[] height) {
         
-        //BRUTE FORCE
+        //BRUTE FORCE USING IF
         
         // int i=0;
         // int max=0,area=0;
@@ -22,7 +21,19 @@ class Solution {
         // }
         // return max;
         
-        //OPTIMAL SOLUTION
+        //BRUTE FORCE USING MATH
+        
+        // int i=0;
+        // int max=0,area=0;
+        // for(;i<height.length-1;i++){
+        //     for(int j=i+1;j<height.length;j++){
+        //         area=(j-i)*Math.min(height[i],height[j]);
+        //             max=Math.max(max,area);
+        //     }
+        // }
+        // return max;
+        
+        //OPTIMAL SOLUTION UNSING ITRATION
         
         int start=0;
         int last=height.length-1;
@@ -45,8 +56,8 @@ class Solution {
             else{
                 start++;
             }
-            //helper(height,start,last,)
         }
         return max;
+        
     }
 }
