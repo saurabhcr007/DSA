@@ -11,7 +11,7 @@ class Solution {
                 sum = sum+nums[j];
             j++;
         }
-        for(int i=0;i<len;i++){
+        for(int i=0;i<queries.length;i++){
             key=queries[i][0];
             pos=queries[i][1];
             if(nums[pos]%2==0){
