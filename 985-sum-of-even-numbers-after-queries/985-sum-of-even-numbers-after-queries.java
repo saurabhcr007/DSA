@@ -15,11 +15,11 @@ class Solution {
             key=queries[i][0];
             pos=queries[i][1];
             if(nums[pos]%2==0){
-                sum=sum-nums[pos];
+                sum-=nums[pos];
             }
             nums[pos]=nums[pos]+key;
             if(nums[pos]%2==0){
-                sum=sum+nums[pos];
+                sum+=nums[pos];
             }
             temp[i]=sum;
         }
