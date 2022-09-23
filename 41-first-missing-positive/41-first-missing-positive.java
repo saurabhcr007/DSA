@@ -10,7 +10,6 @@ class Solution {
                 }
 				nums[nums[i]-1]=nums[i];
 			    nums[i]=temp;
-                System.out.print(j);
 		    }
 	    }
 	    for(int i=0;i<len;i++) {
