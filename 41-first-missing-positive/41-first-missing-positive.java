@@ -3,7 +3,7 @@ class Solution {
         int temp=0;
          int len=nums.length;
         for(int i=0;i<len;i++) {
-		    while(nums[i]>0 && nums[i]<=len) {
+		    for(;nums[i]>0 && nums[i]<=len;) {
 			    temp=nums[nums[i]-1];
 			    if(temp==nums[i]){
                     break;
